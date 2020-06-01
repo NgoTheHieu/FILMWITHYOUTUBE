@@ -66,7 +66,6 @@ function App() {
     let response = await fetch(
       `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${apiKey}&language=en-US`
     );
-    alert(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${apiKey}&language=en-US`)
     const data = await response.json();
     const items = data.results;
     const trailerkey = items[Math.floor(Math.random()*items.length)];
